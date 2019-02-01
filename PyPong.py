@@ -153,6 +153,10 @@ class PyPong():
 
         reward0 = 0
         reward1 = 0
+        if(self.ball_v[0] < 0):
+            reward1 = 1
+        else:
+            reward0 = 1
 
         if not self._do_action(action0,0):
             #optional illegal action penalty
